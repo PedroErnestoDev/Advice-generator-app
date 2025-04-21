@@ -95,12 +95,6 @@ button {
     display: none;
 }
 
-
-button:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0px 0px 20px var(--green300));
-}
-
 @media (max-width:775px){
     #containerAdvice {
         width: 90%;
@@ -120,9 +114,9 @@ button:hover {
 
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     button:hover {
-        transform: scale(1.1);
-        filter: drop-shadow(0px 0px 20px var(--green300));
+      transform: scale(1.1);
+      filter: drop-shadow(0px 0px 20px var(--green300));
     }
-}
+  }
