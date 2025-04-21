@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Special+Gothic+Condensed+One&display=swap');
+
+:root {
+    /* Primary */
+
+    --blue200:  hsl(193, 38%, 86%);
+    --green300: hsl(150, 100%, 66%);
+
+    /* Neutral */
+
+    --blue600: hsl(217, 19%, 38%);
+    --blue900: hsl(217, 19%, 24%);
+    --blue950: hsl(218, 23%, 16%);
+
+    /* body copy */
+
+    --FontSizeQuote: 28px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: var(--blue950);
+}
+
+#containerAdvice {
+    display: flex;
+    flex-direction: column;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    background-color: var(--blue900);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    row-gap: 50px;
+    width: 700px;
+    padding: 20px;
+    text-align: center;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position:absolute;
+
+    span {
+        color: var(--green300);
+        font-size: 10px
+    }
+}
+
+#containerAdviceTitleNumber {
+    display: flex;
+    flex-direction: row;
+    column-gap:  5px;
+}
+
+#AdviceTitle {
+    letter-spacing: 3px;
+}
+
+#containerAdviceText {
+    color: var(--blue200);
+    font-size: 28px;
+}
+
+#containerDivisor {
+    color: var(--blue200);
+    margin-bottom: 5%;
+}
+
+button {
+    background-color: var(--green300);
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 270px;
+    transition: ease-in-out 300ms;
+}
+
+#divisorDesktop {
+    display: flex;
+}
+
+#divisorMobile {
+    display: none;
+}
+
+
+button:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 20px var(--green300));
+}
+
+@media (max-width:775px){
+    #containerAdvice {
+        width: 90%;
+        height: 400px;
+    }
+    #divisorDesktop {
+        display: none;
+    }
+    
+    #divisorMobile {
+        display: flex;
+    }
+    
+    button {
+        top: 370px;
+    }
+
+}
